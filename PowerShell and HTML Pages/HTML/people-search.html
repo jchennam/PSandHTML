@@ -1,0 +1,77 @@
+<style>
+:-ms-input-placeholder { /* IE10–11 */
+    color: #999 !important;
+    font-style: italic !important;
+}
+
+::-ms-input-placeholder { /* Edge */
+    color: #999;
+    font-style: italic ;
+}
+
+::placeholder { /* CSS Working Draft */
+   color: #999;
+    font-style: italic ;
+}
+.people-title{
+    font: 400 22px/27px "Aleo", sans-serif;
+    color: #4d4d4f;
+    margin:0;
+    margin-bottom:18px;
+}
+.people-container{
+    padding:30px;
+    border: 1px solid #E3E8DA;
+    text-align:right;
+}
+    .workday-search{
+        border: 1px solid #E3E8DA;
+        box-shadow: none;
+        width: calc(100% - 40px);
+        padding:13px 20px;
+        color:#241f21;
+        font: 400 14px/18px "Segoe UI", sans-serif;
+    }
+     .workday-search:placeholder{
+    color:#999;
+    font-style:italic;
+}
+    .workday-btn{
+        border:0;
+        margin-top:20px;
+        background-color: #99BD7D;
+        width:127px;
+        font: Bold 14px/16px "Verlag A", sans-serif;
+        color: #FFFFFF;
+        padding:15px 40px;
+    }
+@media screen and (min-width: 768px) {
+.people-container{
+	display:flex;
+	}
+	.workday-search{	
+        width: calc(100% - 167px);
+		margin-right:20px;
+	}
+	.workday-btn{
+		margin:0
+	}
+}
+</style>
+<h2 class="people-title" >People Search</h2>
+<div class="people-container">
+<input class="workday-search" placeholder="Enter Name" id="wdsearchurl" value="">
+<button id="wkday-btn" class="workday-btn" onclick="goToWorkday()">Search</button>
+</div>
+<script type="text/javascript" language="javascript">
+
+function goToWorkday() {
+
+    		var x = document.getElementById("wdsearchurl").value;
+    
+    		var y = x.replace(/ /g, '+');
+    
+    		window.open("https://www.myworkday.com/pxd/d/search.htmld?q=" + y)
+      
+  		} 
+  		</script>
